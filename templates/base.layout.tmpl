@@ -1,0 +1,32 @@
+{{define "base"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        {{block "css" .}}
+
+        {{end}}
+
+    </head>
+    <body>
+    <!--We've put content directive in body and what it says to GoLang is what yous ee in b/w these blocks will keep changing-->
+    <!--I might've content I wanna stick in these, and it might be just HTML and in that case, we don't need . after "content".-->
+    <!--More often it'll be data that I'll pass from my handler to the template renderer to render on template.-->
+    <!--All this dot (.) means is that include whatever data you've with this template and send it to this block-->
+    <!--so we can use it if we've to-->
+        {{block "content" .}}
+
+        {{end}}
+
+
+        {{block "js" .}}
+
+        {{end}}
+    </body>
+    </html>
+{{end}}

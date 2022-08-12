@@ -1,0 +1,14 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>This is the about page</h1>
+                <p>This is some text</p>
+                <!-- below line means: I am going to use func index to look up value in smth which has indices. I'm looking for StringMap. Dot(.) in front of it refers to all the data within StringMap and in this particular case, I'm looking for value at "test" index-->
+                <p>This came from the template: {{index .StringMap "test"}}</p>
+            </div>
+        </div>
+    </div>
+{{end}}
